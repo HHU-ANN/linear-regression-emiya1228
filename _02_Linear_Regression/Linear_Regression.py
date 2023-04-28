@@ -9,10 +9,12 @@ except ImportError as e:
     import numpy as np
 
 def ridge(data):
-    pass
+    x, y = read_data();
+    return np.dot((np.linalg.inv(np.dot(x.T, x)) + 5 * np.eye(6)), np.dot(x.T, y));
     
 def lasso(data):
-    pass
+    x, y = read_data();
+    return np.dot((np.linalg.inv(np.dot(x.T, x)) , np.dot(x.T, y));
 
 def read_data(path='./data/exp02/'):
     x = np.load(path + 'X_train.npy')
