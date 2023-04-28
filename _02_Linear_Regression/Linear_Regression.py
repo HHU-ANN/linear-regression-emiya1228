@@ -10,7 +10,7 @@ except ImportError as e:
 
 def ridge(data):
     x, y = read_data();
-    return np.dot((np.linalg.inv(np.dot(x.T, x)) + 5 * np.eye(6)), np.dot(x.T, y));
+    return np.dot((np.linalg.inv(np.dot(x.T, x)) , np.dot(x.T, y));
     
 def lasso(data):
     x, y = read_data();
