@@ -8,8 +8,8 @@ except ImportError as e:
     os.system("sudo pip3 install numpy")
     import numpy as np
 
-def ridge(x,y):
-
+def ridge(date):
+    x, y = read_data();
     return np.dot(np.linalg.inv(np.dot(x.T, x)) +0.5*np.eye(np.linalg.matrix_rank(np.linalg.inv(np.dot(x.T, x)))), np.dot(x.T, y));
     
 def lasso(data):
