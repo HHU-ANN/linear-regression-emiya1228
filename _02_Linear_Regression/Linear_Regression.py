@@ -8,9 +8,9 @@ except ImportError as e:
     os.system("sudo pip3 install numpy")
     import numpy as np
 
-def ridge(data):
-    x, y = read_data();
-    return np.dot((np.linalg.inv(np.dot(x.T, x)) +5*np.eye(numpy.linalg.matrix_rank(np.linalg.inv(np.dot(x.T, x)))), np.dot(x.T, y));
+def ridge(x,y):
+
+    return np.dot((np.linalg.inv(np.dot(x.T, x)) +0.5*np.eye(numpy.linalg.matrix_rank(np.linalg.inv(np.dot(x.T, x)))), np.dot(x.T, y));
     
 def lasso(data):
     x, y = read_data();
