@@ -10,16 +10,16 @@ except ImportError as e:
 
 
 def ridge(data):
-    x, y = read_data();
-    return np.dot(np.linalg.inv(np.dot(x.T, x))+0.5*np.linalg.matrix_rank(np.linalg.inv(np.dot(x.T, x))), np.dot(x.T, y));
+    x, y = read_data()
+    return np.dot(np.linalg.inv(np.dot(x.T, x))+0.5*np.linalg.matrix_rank(np.linalg.inv(np.dot(x.T, x))), np.dot(x.T, y))
 
 
 def lasso(data):
-    x, y = read_data();
+    x, y = read_data()
     w=np.array([1, 1, 1, 1, 1, 1])
-    for i in range(10)
-        w=np.dot(np.linalg.inv(np.dot(x.T, x)), np.dot(x.T, y)-0.5*w);
-    return w;
+    for i in range(10):
+        w = np.dot(np.linalg.inv(np.dot(x.T, x)), np.dot(x.T, y)-0.5*w)
+    return w
 
 
 def read_data(path='./data/exp02/'):
