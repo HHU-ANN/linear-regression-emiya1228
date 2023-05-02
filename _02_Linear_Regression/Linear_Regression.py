@@ -18,8 +18,8 @@ def ridge(data):
 def lasso(data):
     x, y = read_data()
     w = np.array([1, 1, 1, 1, 1, 1])
-    for i in range(6):
-        w = np.dot(np.linalg.inv(np.dot(x.T, x)), np.dot(x.T, y)-0.5*w)
+
+    w = np.dot(np.linalg.inv(np.dot(x.T, x)), np.dot(x.T, y)-0.5*w)
     return w @ data
 
 
